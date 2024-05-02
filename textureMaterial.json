@@ -7,10 +7,10 @@
     "enum": [
         "Dif",
         "DifNor",
-        "DifAgs",
-        "DifNorAgs",
-        "DifAgsNor",
-        "NorAgs",
-        "Ags"
+        "DifAsg",
+        "DifNorAsg",
+        "DifAsgNor",
+        "NorAsg",
+        "Asg"
     ]
 }
