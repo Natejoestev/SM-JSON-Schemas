@@ -94,7 +94,9 @@
             "description": "The time it takes to destroy the part"
           },
           "density": {
-            "type": "number"
+            "type": "number",
+            "deprecated": true,
+            "description": "please use the new one under 'ratings'"
           },
           "name": {
             "type": "string",
@@ -340,10 +342,12 @@
           },
           "characterShape": {
             "type": "object",
+            "description": "specifies that this represents a character",
             "additionalProperties": false,
             "properties": {
               "characterUuid": {
-                "$ref": "./uuid.json"
+                "$ref": "./uuid.json",
+                "title": "the character"
               },
               "placementSphereRadius": {
                 "type": "number"
@@ -365,6 +369,7 @@
           },
           "spotLight": {
             "type": "object",
+            "description": "same as 'spotlight' sm devs decided to just capitalise the L",
             "additionalProperties": false,
             "properties": {
               "defaultLuminance": {
@@ -376,7 +381,9 @@
             }
           },
           "itemStack": {
-            "type": "object"
+            "type": "object",
+            "description": "specifies that when placed down, it 'consumes' all of that stack into one physical item with a number saying how manu there are",
+            "additionalProperties": false
           },
           "consumable": {
             "type": "boolean",
@@ -402,7 +409,8 @@
             }
           },
           "carryItem": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "if this object needs to be caried on the players sholder when picked up.\n(not placed in inventory)"
           },
           "pipe": {
             "type": "object",
@@ -448,6 +456,7 @@
           },
           "simpleInteractive": {
             "type": "object",
+            "description": "specifies that this is an interactible.\ncan have a single logical input, used to trigger and animation and audio.",
             "additionalProperties": false,
             "properties": {
               "animationTime": {
@@ -475,10 +484,12 @@
           },
           "survivalSpring": {
             "type": "object",
+            "description": "specifies that this is a (newer) spring.",
             "additionalProperties": false,
             "properties": {
               "length": {
-                "type": "number"
+                "type": "integer",
+                "description": "the amount of blocks long this spring is"
               }
             }
           },
@@ -521,14 +532,16 @@
             "type": "number"
           },
           "harvestablePart": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "if this is part of a harvestable"
           },
           "button": {
             "type": "object",
             "description": "specifies that the part is a button"
           },
           "baseUuid": {
-            "$ref": "./uuid.json"
+            "$ref": "./uuid.json",
+            "title": "used to specify the UUID of a part that this derives from"
           },
           "title": {
             "type": "string",
@@ -545,6 +558,7 @@
           },
           "preview": {
             "type": "object",
+            "description": "(used for SM debug shenanagins)",
             "additionalProperties": false,
             "properties": {
               "effect": {
@@ -761,7 +775,9 @@
             "$ref": "#/definitions/objRatings"
           },
           "friction": {
-            "type": "number"
+            "type": "number",
+            "description": "please use the new friction under 'ratings'",
+            "deprecated": true
           },
           "flammable": {
             "type": "boolean",

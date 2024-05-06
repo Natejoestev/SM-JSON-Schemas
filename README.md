@@ -25,6 +25,4 @@ RotationSet:
 SubMesh:
 - 'custom' & 'idx' description
 ShapeSet:
-- blockList: 'friction' & 'qualityLevel' description
-- partList: 'density', 'characterShape', 'itemStack', 'carryItem', 'simpleInteractive', 'survivalSpring', 'restitution', 'harvestablePart', 'baseUuid', 'preview'
-- where is `spotLight` used (capital L)
+- partList: 'restitution' (powertools & robotparts.json)
