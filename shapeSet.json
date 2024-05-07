@@ -96,7 +96,7 @@
           "density": {
             "type": "number",
             "deprecated": true,
-            "description": "please use the new one under 'ratings'"
+            "description": "Specifies the density of the shape. Deprecated use: ratings.density"
           },
           "name": {
             "type": "string",
@@ -776,7 +776,7 @@
           },
           "friction": {
             "type": "number",
-            "description": "please use the new friction under 'ratings'",
+            "description": "Specifies the friction of the shape. Deprecated use: ratings.friction",
             "deprecated": true
           },
           "flammable": {
